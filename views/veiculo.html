@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cadastro de Veiculos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../assets/plugins/SweetAlert/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="card">
+        <div class="card-header">
+            <h3 text-center>Cadastro de Veiculos</h3>
+        </div>
+        <div class="card-body">
+            <input type="hidden" name="idVeiculo" id="idVeiculo">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="chassi">Numero do Chassi:</label>
+                <input type="text" name="chassi" id="chassi" placeholder="Digite o numero do chassi" class="form-control"  autofocus>
+              </div>
+              <div class="col-md-6">
+                <label for="marca">Marca:</label>
+                <input type="text" name="marca" id="marca" placeholder="Digite a marca do veiculo" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="ano">Ano:</label>
+                <input type="text" name="ano" id="ano" placeholder="Digite o ano do veiculo" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label for="modelo">Modelo:</label>
+                <input type="text" name="modelo" id="modelo" placeholder="Digite a modelo do veiculo" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="placa">Placa:</label>
+                <input type="text" name="placa" id="placa" placeholder="Digite o placa do veiculo" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label for="caracteristicas">Caracteristicas:</label>
+                <input type="text" name="caracteristicas" id="caracteristicas" placeholder="Digite as caracteristicas do veiculo" class="form-control">
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="btn-group-sm">
+                  <button class="btn btn-outline-info" onclick="Consultar();"><span class="fa fa-search"></span> Consultar</button>
+                  <button class="btn btn-outline-info" id="salvar" onclick="Salvar();"><span class="fa fa-save"></span> Salvar</button>
+                  <button class="btn btn-outline-info" id="editar" onclick="Editar();" disabled="true"><span class="fa fa-pencil-alt"></span> Atualizar</button>
+              </div>
+          </div>
+         
+        </div>
+        <div class="card-footer">
+            <table class="table table-striped" id="tableVeiculos">
+              <thead>
+                <tr>
+                  <th>Nro Chassi</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Ano</th>
+                  <th>Placa</th>
+                  <th>Caracteristicas</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="dados">
+
+              </tbody>
+            </table>
+        </div>
+      </div>
+
+    </div>
+  
+  </body>
+
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="../js/veiculo.js"></script>
+    <script src="../assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+    
+</html>
